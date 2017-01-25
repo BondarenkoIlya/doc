@@ -9,7 +9,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="agreement")
-public class Agreement implements Serializable {
+public class Agreement extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -411275891663405450L;
 

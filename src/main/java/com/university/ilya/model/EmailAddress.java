@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name="email_address")
-public class EmailAddress implements Serializable {
+public class EmailAddress extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -1559861081811194748L;
 

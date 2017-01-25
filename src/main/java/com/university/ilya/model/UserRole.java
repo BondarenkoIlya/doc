@@ -10,7 +10,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "roles")
-public class UserRole implements Serializable {
+public class UserRole extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = 6586868545222530783L;
 

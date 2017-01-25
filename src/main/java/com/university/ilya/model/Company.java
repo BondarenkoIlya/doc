@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name="company")
-public class Company implements Serializable {
+public class Company extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -9178250403951636372L;
 

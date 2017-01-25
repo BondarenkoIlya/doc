@@ -6,7 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name="user_info")
-public class UserInfo implements Serializable {
+public class UserInfo extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -4646779893233570879L;
 
