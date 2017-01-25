@@ -1,15 +1,23 @@
 package com.university.ilya.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
+@Table(name = "roles")
 public class UserRole implements Serializable {
 
     private static final long serialVersionUID = 6586868545222530783L;
 
+    @Column(name = "role", nullable = false)
     private String role;
 
+    @ManyToMany(mappedBy = "userRole")
     private Set<User> users = new HashSet<>();
 
     public String getRole() {
