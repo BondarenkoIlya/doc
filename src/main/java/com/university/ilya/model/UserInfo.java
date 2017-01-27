@@ -2,6 +2,7 @@ package com.university.ilya.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -10,16 +11,16 @@ public class UserInfo extends BaseEntity implements Serializable {
 
     private static final long serialVersionUID = -4646779893233570879L;
 
-    @Column(name="name")
+    @Column(name="user_name")
     private String name;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user_info" ,cascade = CascadeType.REMOVE)
-    private List<EmailAddress> emails;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userInfo" ,cascade = CascadeType.REMOVE)
+    private List<EmailAddress> emails = new ArrayList<>();
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user_info" ,cascade = CascadeType.REMOVE)
-    private List<Company> companies;
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userInfo" ,cascade = CascadeType.REMOVE)
+    private List<Company> companies = new ArrayList<>();
 
-    @OneToOne(mappedBy = "user_info")
+    @OneToOne(mappedBy = "userInfo")
     @PrimaryKeyJoinColumn
     private User user;
 

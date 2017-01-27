@@ -26,15 +26,13 @@ public class Agreement extends BaseEntity implements Serializable {
     private Company company;
 
     @Column(name="document")
-    private InputStream document;
+    private byte[] document;
 
-
-
-    public InputStream getDocument() {
+    public byte[] getDocument() {
         return document;
     }
 
-    public void setDocument(InputStream document) {
+    public void setDocument(byte[] document) {
         this.document = document;
     }
 
